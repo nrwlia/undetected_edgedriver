@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-__version__ = "3.1.6"
+__version__ = "3.1.6.1"
 
 import subprocess
 import json
