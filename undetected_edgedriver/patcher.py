@@ -135,7 +135,7 @@ class Patcher(object):
         :return: version string
         :rtype: LooseVersion
         """
-        path = "/LATEST_STABLE"
+        path = "/LATEST_DEV"
         if self.version_main:
             path += f"_{self.version_main}"
         path = path.upper()
