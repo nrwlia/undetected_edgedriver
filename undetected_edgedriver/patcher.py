@@ -140,7 +140,10 @@ class Patcher(object):
             path += f"_{self.version_main}"
         path = path.upper()
         logger.debug("getting release number from %s" % path)
-        return LooseVersion(urlopen(self.url_repo + path).read().decode('utf-16').replace('\r\n', ''))
+        # It looks like versions after 107.0.1418.68 won't have Windows and Linux releases.
+        # Currently we'll stick with 107.0.1418.62
+        #return LooseVersion(urlopen(self.url_repo + path).read().decode('utf-16').replace('\r\n', ''))
+        return "107.0.1418.62"
 
     def parse_exe_version(self):
         with io.open(self.executable_path, "rb") as f:
